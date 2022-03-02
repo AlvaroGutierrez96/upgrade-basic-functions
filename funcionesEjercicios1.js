@@ -6,4 +6,3 @@ function sum(numberOne, numberTwo) {
       return numberTwo;
     }
   }
-  console.log(sum)
