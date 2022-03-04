@@ -14,20 +14,23 @@ let counterWords = [
     'upgrade',
     'code'
   ];
-    function repeatCounter(array) {
-    let wordCounter = 0;
-    let counteredWords = [];
-    for (let i = 0; i < array.length; i++) {
-        wordCounter=0;
-        if(!counteredWords.includes(array[i])){
-            for (let j = 0; j < array.length; j++) {
-                if (array[i] === array[j]) {
-                    wordCounter++;
-                    counteredWords.push(array[i]);
-                }   
-            } console.log('La palabra '+ array[i]+' se repite '+wordCounter+' veces.');       
-        } 
-    } 
+  
+  let total = [];
+  function repeatCounter(param) {
+    let counter = 0;
+    for (let i = 0; i < param.length; i++) {
+      counter = 0;
+      if (!total.includes(param[i])){ 
+        for (let j = 0; j < param.length; j++){
+          if (param[i] == param[j]){
+            counter++;
+          }
+        }
+        console.log('La palabra ' + param[i] + ' se repite ' + counter + ' veces');
+      }
+      total.push(param[i]);
     }
 
-  repeatCounter(counterWords);
+
+  }
+repeatCounter(counterWords);
